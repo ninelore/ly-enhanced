@@ -364,10 +364,11 @@ void xorg(
 		snprintf(
 			x_cmd,
 			1024,
-			"%s %s %s",
+			"%s %s %s %s",
 			config.x_cmd,
 			display_name,
-			vt);
+			vt,
+			"> /dev/null");
 		execl(pwd->pw_shell, pwd->pw_shell, "-c", x_cmd, NULL);
 		exit(EXIT_SUCCESS);
 	}

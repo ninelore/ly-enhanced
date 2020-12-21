@@ -368,7 +368,7 @@ void xorg(
 			config.x_cmd,
 			display_name,
 			vt,
-			"> /dev/null");
+			"--keeptty > /dev/null");
 		execl(pwd->pw_shell, pwd->pw_shell, "-c", x_cmd, NULL);
 		exit(EXIT_SUCCESS);
 	}
